@@ -1,0 +1,104 @@
+{
+    "name": "react-svg-speedmeter",
+    "version": "1.0.0",
+    "description": "react svg speedmeter",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sylhero/react-svg-speedmeter.git"
+    },
+    "keywords": [
+        "reactjs",
+        "svg",
+        "speedmeter"
+    ],
+    "author": "Yulong Song",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/sylhero/react-svg-speedmeter/issues"
+    },
+    "homepage": "https://github.com/sylhero/react-svg-speedmeter#readme",
+    "jest-junit": {
+        "output": "./coverage/junit/results.xml"
+    },
+    "jest": {
+        "testEnvironment": "node"
+    },
+    "engines": {
+        "node": ">=12.9.0",
+        "npm": ">=5.6.0"
+    },
+    "devDependencies": {
+        "@babel/core": "7.10.2",
+        "@babel/plugin-transform-runtime": "7.10.1",
+        "@babel/preset-env": "7.10.2",
+        "@babel/preset-react": "7.10.1",
+        "@babel/preset-typescript": "7.10.1",
+        "@babel/register": "7.10.1",
+        "@babel/runtime-corejs2": "7.10.2",
+        "@emotion/babel-preset-css-prop": "10.0.27",
+        "@types/react": "16.9.36",
+        "@types/react-dom": "16.9.8",
+        "@types/react-router-dom": "5.1.5",
+        "@typescript-eslint/eslint-plugin": "3.2.0",
+        "@typescript-eslint/parser": "3.2.0",
+        "autoprefixer": "9.8.0",
+        "babel-core": "7.0.0-bridge.0",
+        "babel-eslint": "10.1.0",
+        "babel-jest": "26.0.1",
+        "babel-loader": "8.1.0",
+        "babel-plugin-import": "1.13.0",
+        "compression-webpack-plugin": "4.0.0",
+        "eslint": "7.2.0",
+        "eslint-config-prettier": "6.11.0",
+        "eslint-loader": "4.0.2",
+        "eslint-plugin-import": "2.21.2",
+        "eslint-plugin-jsx-a11y": "6.2.3",
+        "eslint-plugin-prettier": "^3.1.2",
+        "eslint-plugin-react": "7.20.0",
+        "file-loader": "6.0.0",
+        "html-webpack-plugin": "4.3.0",
+        "jest": "26.0.1",
+        "jest-junit": "10.0.0",
+        "mini-css-extract-plugin": "0.9.0",
+        "optimize-css-assets-webpack-plugin": "5.0.3",
+        "prettier": "2.0.5",
+        "raw-loader": "4.0.1",
+        "react-addons-test-utils": "15.6.2",
+        "react-test-renderer": "16.13.1",
+        "rimraf": "3.0.2",
+        "source-map-loader": "1.0.0",
+        "stats-webpack-plugin": "0.7.0",
+        "style-loader": "1.2.1",
+        "stylelint": "13.6.0",
+        "stylelint-config-recommended": "3.0.0",
+        "stylelint-config-standard": "20.0.0",
+        "stylelint-config-styled-components": "0.1.1",
+        "stylelint-processor-styled-components": "1.10.0",
+        "stylelint-webpack-plugin": "2.0.0",
+        "terser-webpack-plugin": "3.0.3",
+        "ts-loader": "7.0.5",
+        "typescript": "3.9.5",
+        "webpack": "4.43.0",
+        "webpack-bundle-analyzer": "3.8.0",
+        "webpack-cli": "3.3.11",
+        "webpack-dev-server": "3.11.0",
+        "webpack-runtime-analyzer": "1.5.0"
+    },
+    "dependencies": {
+        "@emotion/core": "10.0.28",
+        "emotion": "10.0.27",
+        "react": "16.13.1",
+        "react-dom": "16.13.1"
+    },
+    "scripts": {
+        "lint": "eslint --ext ts --ext tsx src",
+        "test:unit": "npm run lint && jest --config ./jest.config.json --coverage --runInBand",
+        "build": "npm run lint && webpack --config ./webpack-config/webpack.dev.js",
+        "server": "webpack-dev-server --config ./webpack-config/webpack.dev.js",
+        "server:prod": "webpack-dev-server --config ./webpack-config/webpack.prod.js",
+        "dev": "npm run build && npm run server",
+        "production": "npm run clean && webpack --config ./webpack-config/webpack.prod.js",
+        "clean": "rimraf app-build reports coverage .nyc_output dist"
+    }
+}

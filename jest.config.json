@@ -1,0 +1,22 @@
+{
+    "moduleNameMapper": {
+        "^.+\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js",
+        "^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)$": "<rootDir>/__mocks__/fileMock.js"
+    },
+    "collectCoverageFrom": ["src/**/*.{js,jsx}"],
+    "testPathIgnorePatterns": ["<rootDir>/(app-build|node_modules)/"],
+    "coveragePathIgnorePatterns": [
+        "<rootDir>/src/.+/__tests__/.+\\.spec\\.ts(x?)",
+        "<rootDir>/src/.+/__stories__/.+\\.stories\\.ts(x?)",
+        "<rootDir>/src/.+/index\\.ts(x?)",
+        "<rootDir>/src/.+/ErrorBoundary/ErrorBoundary.tsx",
+        "<rootDir>/src/.+/App.tsx",
+        "<rootDir>/src/.+/index.tsx",
+        "<rootDir>/src/.+/Reducers.ts",
+        "<rootDir>/src/.+/Routes.tsx",
+        "<rootDir>/src/.+/Store.ts",
+        "<rootDir>/src/.+/Types.ts"
+    ],
+    "reporters": ["default", "jest-junit"],
+    "testRegex": "(/__tests__/.*\\.spec)\\.(tsx|ts)$"
+}
